@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+body{
+    background: url('https://dojo.code.ninja/images/bg/bg.svg');
+    background-color: #051b36;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.containerArea{
+    height: 3em;
+    width: 68em;
+    padding: 2%;
+    margin: 2%;
+    float: left;
+    position: relative;
+}
+
+.beltTitle{
+    font-size: 24px;
+    font-family: 'Open Sans';
+    color: azure;
+
+}
+
+#funTitle{
+position: relative;
+
+
+}
+#whiteTitle{
+    position: relative;
+
+}
+#yellowTitle{
+    position: relative;
+
+}
+#orangeTitle{
+    position: relative;
+
+}
+
+#childContainer{
+padding: 8px;
+background-color: #051b36;
+width: 15%;
+height: 20px;
+position: relative;
+color: aliceblue;
+text-align: center;
+font-family: 'Open Sans';
+cursor:grabbing;
+z-index: 10;
+margin-left: 1%;
+display: inline-block;
+border: black 5px solid;
+}
+#childrenArea{
+    height: 3em;
+    width: 95%;
+    padding: 2%;
+    float: left;
+    bottom: 0px;
+    background-color: black;
+    position: absolute;
+    display: inline-block;
+}
+
+
+#Fundamentals{
+    background-color:lightpink;
+    margin-left: 1%;
+}
+#WhiteBelt{
+    background-color: white;
+    margin-left: 5%;
+}
+#YellowBelt{
+    background-color: yellow;
+    margin-left: 4%;
+}
+#OrangeBelt{
+    background-color: orange;
+    margin-left: 3%;
+}
