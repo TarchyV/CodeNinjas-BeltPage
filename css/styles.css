@@ -5,7 +5,7 @@ body{
     background-color: #051b36;
     background-size: cover;
     background-attachment: fixed;
-
+    overflow: hidden;
 }
 .containerArea{
     height: 3em;
@@ -28,6 +28,37 @@ position: relative;
 
 
 }
+input {
+    border: 0;
+    margin-right: 5px;
+    background: white;
+    border-bottom: 1px solid blue;
+    border-radius: 18px;
+    width: 200px;
+    padding: 8px;    
+    font-size: 24px;
+    font-family: 'Open Sans';
+}
+
+button {
+background-color: blue;
+border: 0;
+padding: 14px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+border-radius: 201px;
+color: white;
+text-transform: uppercase;
+cursor: pointer;
+font-family: 'Open Sans';
+
+
+  }
+button:focus{
+outline: 0;
+    
+}
 #whiteTitle{
     position: relative;
 
@@ -42,10 +73,11 @@ position: relative;
 }
 
 #childContainer{
-padding: 8px;
+padding: 6px;
 background-color: #051b36;
-width: 15%;
+width: 10%;
 height: 20px;
+border-radius: 12px;
 position: relative;
 color: aliceblue;
 text-align: center;
@@ -60,16 +92,37 @@ border: black 5px solid;
     height: 3em;
     width: 95%;
     padding: 2%;
-    float: left;
-    bottom: 0px;
-    background-color: black;
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.561);
+    border-radius: 42px;
     position: absolute;
     display: inline-block;
 }
 
+#addNinjaTitle{
+    position: absolute;
+    color: white;
+    left: 50px;
+    bottom: 11%;
+    font-size: 18px;
+    z-index: 10;
+    font-family: 'Open Sans';
+}
+/* https://cdn4.iconfinder.com/data/icons/user-interface-131/32/delete-512.png */
+
+#trashcan{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 4%;
+    filter: invert();
+    bottom:15%;
+}
+
 
 #Fundamentals{
-    background-color:lightpink;
+    background-color:rgba(0, 0, 0, 0.383);
+    border: white dotted 4px;
     margin-left: 1%;
 }
 #WhiteBelt{
@@ -84,3 +137,8 @@ border: black 5px solid;
     background-color: orange;
     margin-left: 3%;
 }
+#GreenBelt{
+    background-color: green;
+    margin-left: 4.5%;
+}
+

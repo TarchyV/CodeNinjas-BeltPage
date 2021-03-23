@@ -16,8 +16,6 @@ function makeDraggable(e, node,parent){
 
 $('#childContainer').bind('drag', function(e){
 
- 
-
 });    
 
 $('.containerArea').bind('dragover', function (e) {
@@ -43,7 +41,7 @@ $('.containerArea').bind('drop', function (e) {
 
   if (e.originalEvent.stopPropagation)
      e.originalEvent.stopPropagation();   
-    ``
+
   var stuff = $(e.originalEvent.dataTransfer.getData('stuff'));
   stuff.appendTo(this);
   console.log(stuff)
@@ -51,9 +49,39 @@ $('.containerArea').bind('drop', function (e) {
   stuff.attr({id: "childContainer"})
   stuff.attr({draggable:"true"})
   stuff.bind('dragstart',function(ev){makeDraggable(ev, stuff,this)})
-  POSTStudent(stuff.text(),beforeBelt,this)
+  POSTStudent(stuff.text(),beforeBelt,this.id.toString().toLowerCase())
+  $(draggedElem).remove()
+  flyConfetti()
+  return false;
+});  
+$('#trashcan').bind('dragover', function (e) {
+
+  if(e.originalEvent.preventDefault)
+    e.preventDefault();
+
+  e.originalEvent.dataTransfer.dropEffect = 'copy';
+  return false;
+});
+
+
+$('#trashcan').bind('dragenter', function (e) {
+  $(this).addClass('over');
+}); 
+
+$('#trashcan').bind('dragleave', function (e) {
+  $(this).removeClass('over');
+}); 
+$('#trashcan').bind('drop', function (e) {
+
+  if (e.originalEvent.stopPropagation)
+     e.originalEvent.stopPropagation();   
+
+  var stuff = $(e.originalEvent.dataTransfer.getData('stuff'));
+  stuff.appendTo(this);
+  console.log(stuff)
+  dropped = true;
+  POSTStudent(stuff.text(),beforeBelt,'')
   $(draggedElem).remove()
 
   return false;
 });  
-
